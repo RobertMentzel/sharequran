@@ -37,7 +37,27 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer components{
