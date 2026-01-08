@@ -8,23 +8,49 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
 <MainLayout title="Titel"> 
-<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<section class="relative h-[90vh] flex items-center justify-start overflow-hidden">
+
   <!-- Background image -->
   <img 
     src="/nythero.png" 
     alt="Hero" 
-    class="absolute inset-0 w-full h-full object-cover object-[75%_0%] scale-[1.0]"
+    class="absolute inset-0 w-full h-full object-cover object-[75%_0%] scale-[1.0] lg:object-[75%_70%]"
   />
 
   <!-- Primary color gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] to-transparent" style="top:-80%;"></div>
+  <div class="absolute inset-0 2xl:hidden bg-gradient-to-t from-[var(--color-primary)] to-transparent" style="top:-80%;"></div>
+<!-- Desktop diagonal gradient -->
+<div
+  class="hidden 2xl:block absolute inset-0"
+  style="
+    background: linear-gradient(
+      to top,
+      var(--color-primary) 00%,
+      rgba(100,161,153,0.9) 10%,
+      rgba(100,161,153,0) 120%
+    );
+    clip-path: polygon(
+      0 -2%,
+      28% 0,
+      68% 102%,
+      0 102%
+    );
+  "
+></div>
 
   <!-- Content -->
-  <div class="relative z-10 text-start max-w-3xl px-4 mt-50">
-    <h1 class="text-4xl font-display font-bold text-white mb-4">DONATE A QURAN</h1>
-    <h2 class="font-display text-lg text-white mb-40">
-      You’re an ambassador to Islam no matter what you do, and what better way to be an ambassador to your faith than donating a gift that cannot be replaced.
-    </h2>
+  <div class="relative z-10 text-start max-w-3xl px-4 mt-50 xl:ml-10 2xl:ml-40"
+  style="margin-left: clamp(2.5rem, 5vw, 10rem);">
+    <h1 class="font-display font-bold text-white mb-4
+           text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl">
+  DONATE A QURAN
+</h1>
+
+<h2 class="font-display text-white mb-40 max-w-[50ch]
+           text-base sm:text-lg lg:text-xl 2xl:text-2xl">
+  You're an ambassador to Islam no matter what you do, and what better way to be an ambassador to your faith than donating a gift that cannot be replaced.
+</h2>
+
     <Button>DONATE</Button>
   </div>
 </section>

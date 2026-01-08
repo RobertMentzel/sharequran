@@ -1,14 +1,12 @@
-
-
 <header class="fixed top-0 left-0 w-full z-20">
-  <div class="container mx-auto flex justify-between p-4">
+  <div class="flex justify-between items-center p-4 w-full">
     <!-- Logo image -->
     <a href="/">
       <img src="/sharequran_logo.png" alt="ShareQuran Logo" class="h-[200px]">
     </a>
 
     <!-- Burger button -->
-    <button id="burgerBtn" class="cursor-pointer flex flex-col justify-between w-10 h-8">
+    <button id="burgerBtn" class="cursor-pointer flex flex-col justify-between w-10 h-8 self-start">
       <span class="block w-full h-1 bg-[var(--color-primary)]"></span>
       <span class="block w-full h-1 bg-[var(--color-primary)]"></span>
       <span class="block w-full h-1 bg-[var(--color-primary)]"></span>
@@ -16,34 +14,32 @@
   </div>
 
   <!-- Mobile menu -->
- <!-- Mobile menu -->
-<nav
-  id="mobileMenu"
-  class="fixed inset-0 w-screen h-screen bg-[var(--color-primary)] text-[var(--color-neutral)]
-         flex flex-col justify-center items-center space-y-6 p-8 hidden"
->
-  <!-- Close button -->
-  <button
-    id="closeMenuBtn"
-    class="absolute top-6 right-6 cursor-pointer text-4xl font-bold"
-    aria-label="Close menu"
+  <nav
+    id="mobileMenu"
+    class="fixed inset-0 w-screen h-screen bg-[var(--color-primary)] text-[var(--color-neutral)]
+           flex flex-col justify-center items-center space-y-6 p-8 hidden"
   >
-    ×
-  </button>
+    <!-- Close button -->
+    <button
+      id="closeMenuBtn"
+      class="absolute top-6 right-6 cursor-pointer text-4xl font-bold"
+      aria-label="Close menu"
+    >
+      ×
+    </button>
 
-  <!-- Links -->
-  <a href="/donate" class="text-2xl font-semibold">Donate</a>
-  <a href="/about" class="text-2xl font-semibold">About</a>
-  <a href="/statistics" class="text-2xl font-semibold">Statistics</a>
+    <!-- Links -->
+    <a href="/donate" class="text-2xl font-semibold">Donate</a>
+    <a href="/about" class="text-2xl font-semibold">About</a>
+    <a href="/statistics" class="text-2xl font-semibold">Statistics</a>
 
-  <!-- Logo at bottom -->
-  <a href="/" class="mt-8">
-    <img src="/sharequran_logo.png" alt="ShareQuran Logo" class="h-[200px]">
-  </a>
-</nav>
+    <!-- Logo at bottom -->
+    <a href="/" class="mt-8">
+      <img src="/sharequran_logo.png" alt="ShareQuran Logo" class="h-[200px]">
+    </a>
+  </nav>
   
-
- <script type="module">
+  <script type="module">
     const burgerBtn = document.getElementById('burgerBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -57,4 +53,3 @@
     });
   </script>
 </header>
-
