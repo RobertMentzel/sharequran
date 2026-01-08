@@ -12,6 +12,7 @@
   font-display: swap;
 }
 
+
 @font-face {
   font-family: 'Istok Web';
   src: url('/fonts/IstokWeb-Regular.ttf') format('truetype');
@@ -33,7 +34,7 @@
   /*Typografi */
   --font-display: 'Ubuntu Sans', sans-serif;
   --font-sans: 'Istok Web', sans-serif;
-  --font-serif: 'Domine', serif;
+  
 }
 
 @layer base {
@@ -48,6 +49,9 @@
     color: var(--color-neutral);
     font-family: var(--font-sans);
     line-height: 1.6;
+  }
+  main{
+    margin: 30px;
   }
 
   *, *::before, *::after {

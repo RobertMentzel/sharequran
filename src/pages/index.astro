@@ -7,9 +7,34 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
-<MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<Heading htmlheading="display">Lav noget flot!</Heading>
-        <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+<MainLayout title="Titel"> 
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+  <!-- Background image -->
+  <img 
+    src="/nythero.png" 
+    alt="Hero" 
+    class="absolute inset-0 w-full h-full object-cover object-[75%_0%] scale-[1.0]"
+  />
+
+  <!-- Primary color gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] to-transparent" style="top:-80%;"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-start max-w-3xl px-4 mt-50">
+    <h1 class="text-4xl font-display font-bold text-white mb-4">DONATE A QURAN</h1>
+    <h2 class="font-display text-lg text-white mb-40">
+      You’re an ambassador to Islam no matter what you do, and what better way to be an ambassador to your faith than donating a gift that cannot be replaced.
+    </h2>
+    <Button>DONATE</Button>
+  </div>
+</section>
+
+
+	<main>
+		<p>you are an ambassador</p>
 	</main>
+	<!-- <main class="container mx-auto p-4">
+		<Heading htmlheading="font">DONATE A QURAN</Heading>
+        <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+	</main> -->
 </MainLayout>
