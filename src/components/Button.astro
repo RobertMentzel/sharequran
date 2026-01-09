@@ -1,13 +1,34 @@
-<button
-  class="font-display
-         w-[170px] h-[50px] lg:w-[210px] lg:h-[60px]
-         bg-[var(--color-accent)] text-[var(--color-neutral)]
-         font-regular
-         shadow-md cursor-pointer hover:shadow-xl hover:scale-105 transform-gpu
-         transition-colors transition-shadow duration-200
-         hover:bg-[var(--color-neutral)] hover:text-[var(--color-accent)]"
->
-  <slot />
-</button>
+---
+const { href = null } = Astro.props;
+---
+
+{href ? (
+  <a
+    href={href}
+    class="font-display
+           w-[170px] h-[50px] lg:w-[210px] lg:h-[60px]
+           bg-[var(--color-accent)] text-[var(--color-neutral)]
+           font-regular
+           shadow-md cursor-pointer hover:shadow-xl hover:scale-105 transform-gpu
+           transition-colors transition-shadow duration-200
+           hover:bg-[var(--color-neutral)] hover:text-[var(--color-accent)]
+           flex items-center justify-center
+           text-center no-underline"
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    class="font-display
+           w-[170px] h-[50px] lg:w-[210px] lg:h-[60px]
+           bg-[var(--color-accent)] text-[var(--color-neutral)]
+           font-regular
+           shadow-md cursor-pointer hover:shadow-xl hover:scale-105 transform-gpu
+           transition-colors transition-shadow duration-200"
+  >
+    <slot />
+  </button>
+)}
+
 
 

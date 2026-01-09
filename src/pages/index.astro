@@ -48,16 +48,81 @@ import Button from "../components/Button.astro";
 
 <h2 class=" text-white mb-40 max-w-[50ch]
            text-base sm:text-lg lg:text-xl 2xl:text-2xl">
-  You're an ambassador to Islam no matter what you do, and what better way to be an ambassador to your faith than donating a gift that cannot be replaced.
+  You are an ambassador to Islam no matter what you do, and what better way to be an ambassador to your faith other than donating a gift that cannot be replaced.
 </h2>
 
-    <Button>DONATE</Button>
+    <Button href="/donate">DONATE</Button>
   </div>
 </section>
 
 
 	<main>
-		<p>you are an ambassador</p>
+    <h2 class="mb-10 text-center mt-10">Our Initiative</h2>
+    <div class="m-8 mb-20 grid gap-5 lg:grid-cols-5 lg:max-w-[1200px] lg:mx-auto lg:p-8">
+
+  <!-- Text block: comes first on mobile, second on desktop -->
+  <p class="order-1 lg:order-2 lg:col-span-3">
+    Education changes everything. 
+    <br><br>
+    Through your support, we turn donations into action.
+    <br><br>
+    Every contribution helps fund our journeys to underserved communities where access to education is limited or nonexistent. On the ground, we provide children with free Qurans — giving them knowledge, guidance, and a foundation that reaches far beyond literacy.
+    <br><br>
+    This is not charity for show. It is a direct investment in children who have been left without opportunity — addressing one root problem that causes many others.
+    <br><br>
+    Donate with purpose. Help put knowledge into their hands.
+  </p>
+
+  <!-- Image card: comes second on mobile, first on desktop -->
+  <div class="relative order-2 lg:order-1 lg:col-span-2 aspect-[4/3]">
+  <img src="/initiative.png" alt="" class="w-full h-full object-cover">
+
+  <!-- Top-left label -->
+  <span class="absolute top-2 left-0 bg-[var(--color-accent)] text-white px-2 py-1 text-sm">
+    Educational needs
+  </span>
+
+  <!-- Bottom-right button -->
+  <div class="absolute bottom-2 right-2">
+    <Button href="/about">Read more</Button>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+<section class="bg-[var(--color-secondary)] p-8">
+  <h2 class="text-2xl font-bold m-20 text-center">Statistics</h2>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-30 mb-20">
+    <div class="flex flex-col items-center text-center ">
+      <img src="/bog.svg" alt="" class="mb-4">
+      <p>An estimated 30 million children are out of school in the Middle East and North Africa region, according to UNICEF, risking long-term consequences for their learning and wellbeing.</p>
+    </div>
+
+    <div class="flex flex-col items-center text-center ">
+      <img src="/cirkeldiagram.svg" alt="" class="mb-4">
+      <p>In Gaza, 645,000 children are out of school... at least 84 per cent of schools require full reconstruction or significant rehabilitation before they can reopen.</p>
+    </div>
+
+    <div class="flex flex-col items-center text-center ">
+      <img src="/personer.svg" alt="" class="mb-4">
+      <p class="text-[var(--color-red)] font-bold text-3xl">6 in 10</p>
+      <p>In the MENA region, 6 in 10 children cannot read a simple text with comprehension by 10 years of age, increasing the risk of these children dropping out of school forever.</p>
+    </div>
+  </div>
+
+  <p class="mt-10 text-center text-sm italic text-gray-400">
+  Source: UNICEF, At least 30 million children out of school in the Middle East and North Africa (2025)
+</p>
+<div class="text-center my-10">
+  <Button >Read more</Button>
+</div>
+</section>
+
 	</main>
 	<!-- <main class="container mx-auto p-4">
 		<Heading htmlheading="font">DONATE A QURAN</Heading>

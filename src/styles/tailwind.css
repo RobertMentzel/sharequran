@@ -29,6 +29,7 @@
   --color-accent: #1B63FF;
   --color-neutral: #FFFFFF;
   --color-secondary: #001A17;
+  --color-red: #a10000;
 
 
   /*Typografi */
@@ -52,9 +53,7 @@
     font-family: var(--font-sans);
     line-height: 1.6;
   }
-  main{
-    margin: 30px;
-  }
+ 
  
 
   *, *::before, *::after {
