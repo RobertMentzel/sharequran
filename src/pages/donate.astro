@@ -1,0 +1,104 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+---
+<MainLayout smallLogo>
+
+    
+	<img src="/syrianboy.png" alt="" class="w-full">
+    <div class=" m-8 lg:text-center"><h1>DONATE</h1></div>
+    
+    <main class="m-8 mb-20 grid gap-5 lg:grid-cols-5 lg:max-w-[1200px] lg:mx-auto lg:p-8">
+
+  <!-- TEXT (3 columns on desktop) -->
+  <p class="lg:col-span-3">
+    You will support the benefitting the gaining of a list of positives for kids around the world. The Quran is truly a source of knowledge and purpose, and many other good attributes. With a donation of a Quran to a kid, you give them a way to learn the worlds natural phenomena, social structures and have good ethics. <br><br> A donation of a Quran does not only benefit the kid you donate it to, but it will benefit you as well. Since the Quran is a way of Sadaqah Jariyah, then you will get hasanat everytime the kid reads in the Quran. <br><br>So donate now, you will not regret it.
+  </p>
+
+  <!-- FORM (2 columns on desktop) -->
+  <!-- FORM (2 columns on desktop) -->
+<form
+  class="lg:col-span-2 bg-[var(--color-neutral)] border border-gray-300 p-6 grid gap-6 text-black"
+  id="donationForm"
+>
+
+  <!-- STEP 1: CONTACT -->
+  <div class="form-step">
+    <h3 class="text-black">Contact information</h3>
+
+    <input type="text" placeholder="Full name" class="border p-2 w-full text-black" />
+    <input type="email" placeholder="Email" class="border p-2 w-full text-black" />
+    <input type="tel" placeholder="Phone" class="border p-2 w-full text-black" />
+
+    <button
+      type="button"
+      onclick="nextStep()"
+      class="font-display w-full h-[50px] bg-[var(--color-accent)] text-white"
+    >
+      Continue
+    </button>
+  </div>
+
+  <!-- STEP 2: DONATION -->
+  <div class="form-step hidden">
+    <h3 class="text-black">Donation details</h3>
+
+    <input type="number" placeholder="Donation amount" class="border p-2 w-full text-black" />
+
+    <select class="border p-2 w-full text-black">
+      <option>Yemen</option>
+      <option>Jordan</option>
+      <option>Sudan</option>
+      <option>Palestine</option>
+    </select>
+
+    <button
+      type="button"
+      onclick="nextStep()"
+      class="font-display w-full h-[50px] bg-[var(--color-accent)] text-white"
+    >
+      Continue
+    </button>
+  </div>
+
+  <!-- STEP 3: POLICIES -->
+  <div class="form-step hidden">
+    <h3 class="text-black">Policies</h3>
+
+    <label class="flex gap-2 items-start text-black">
+      <input type="checkbox" />
+      <span>I agree to the terms and conditions</span>
+    </label>
+
+    <label class="flex gap-2 items-start text-black">
+      <input type="checkbox" />
+      <span>I want to receive emails and promotions</span>
+    </label>
+
+    <Button class="mt-4">DONATE</Button>
+  </div>
+
+</form>
+
+</main>
+<script is:inline>
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.form-step');
+
+  function nextStep() {
+    if (currentStep >= steps.length - 1) return;
+
+    steps[currentStep].classList.add('hidden');
+    currentStep++;
+    steps[currentStep].classList.remove('hidden');
+  }
+</script>
+
+
+
+</MainLayout>

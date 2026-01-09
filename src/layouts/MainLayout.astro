@@ -3,6 +3,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 const { title } = Astro.props;
+
+const { smallLogo = false } = Astro.props;
+
+
 ---
 <html lang="da">
 	<head>
@@ -15,7 +19,8 @@ const { title } = Astro.props;
 	</head>
 	<body class="">
 		
-		<Header></Header>
+		<Header smallLogo={smallLogo} />
+
 		
 		<slot />
 

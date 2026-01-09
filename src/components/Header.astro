@@ -1,10 +1,19 @@
+---
+const { smallLogo = false } = Astro.props;
+---
 <header class="absolute top-0 left-0 w-full z-20">
   <div class="flex justify-between items-center p-4 w-full">
     <!-- Logo image -->
-    <a href="/">
-      <img src="/sharequran_logo.png" alt="ShareQuran Logo" class="h-[200px]">
-    </a>
-
+  <a href="/"> <img
+  src="/sharequran_logo.png"
+  alt="ShareQuran Logo"
+  class={
+    smallLogo
+      ? "h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]"
+      : "h-[200px]"
+  }
+/>
+</a>
     <!-- Burger button -->
     <button id="burgerBtn" class="cursor-pointer flex flex-col justify-between w-10 h-8 self-start">
       <span class="block w-full h-1 bg-[var(--color-primary)]"></span>
